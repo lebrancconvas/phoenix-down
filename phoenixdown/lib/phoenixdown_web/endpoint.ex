@@ -1,14 +1,14 @@
-defmodule PhownixdownWeb.Endpoint do
-  use Phoenix.Endpoint, otp_app: :phownixdown
+defmodule PhoenixdownWeb.Endpoint do
+  use Phoenix.Endpoint, otp_app: :phoenixdown
 
-  socket "/socket", PhownixdownWeb.UserSocket
+  socket "/socket", PhoenixdownWeb.UserSocket
 
   # Serve at "/" the static files from "priv/static" directory.
   #
   # You should set gzip to true if you are running phoenix.digest
   # when deploying your static files in production.
   plug Plug.Static,
-    at: "/", from: :phownixdown, gzip: false,
+    at: "/", from: :phoenixdown, gzip: false,
     only: ~w(css fonts images js favicon.ico robots.txt)
 
   # Code reloading can be explicitly enabled under the
@@ -34,10 +34,10 @@ defmodule PhownixdownWeb.Endpoint do
   # Set :encryption_salt if you would also like to encrypt it.
   plug Plug.Session,
     store: :cookie,
-    key: "_phownixdown_key",
-    signing_salt: "tJmP6OfW"
+    key: "_phoenixdown_key",
+    signing_salt: "l92EA92s"
 
-  plug PhownixdownWeb.Router
+  plug PhoenixdownWeb.Router
 
   @doc """
   Callback invoked for dynamically configuring the endpoint.
